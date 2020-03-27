@@ -22,7 +22,7 @@ public enum Operation {
 	},
 	DIV ('/'){
 		@Override
-		public float eval( float a, float b ) throws IllegalOperator {
+		public float eval(float a, float b) throws IllegalOperator {
 			if ( a == 0 )
 				throw new IllegalOperator();
 			else
