@@ -26,8 +26,9 @@ public class Interpreteur {
 					|| str.toLowerCase().equals("back")) {
 				System.out.println("les operands avant " + MoteurRPN.getOperands().toString());
 				undo.exec(RPN);
-				System.out.println("les operand apres" + MoteurRPN.getOperands().toString());
-
+				
+				System.out.println("les operands apres " + MoteurRPN.getOperands().toString());
+				//exit.exec(RPN);
 			}
 
 			else {

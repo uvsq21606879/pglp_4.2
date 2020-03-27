@@ -4,9 +4,9 @@ import java.util.Stack;
 public class MoteurRPN {
 
 	
-	public static Stack<Float> operands = new Stack();
-	public static Stack<Float> operandHistorique = new Stack();
-	public static Stack<Operation> operationHistorique = new Stack();
+	public static Stack<Float> operands = new Stack<Float>();
+	public static Stack<Float> operandHistorique = new Stack<Float>();
+	public static Stack<Operation> operationHistorique = new Stack<Operation>();
 	protected static Boolean lecture = true;
 	
 	public static void lectureOff() {
@@ -28,6 +28,7 @@ public class MoteurRPN {
         	float a = operands.pop();
         	float b = operands.pop();
         	operandHistorique.push(a);
+        	
         	Operation o = operationHistorique.peek();
         
             operands.push(o.eval(a, b));
@@ -37,7 +38,7 @@ public class MoteurRPN {
 	}
 	
 	
-	public static Stack getOperands() {
+	public static Stack<Float> getOperands() {
         return operands;
     }
 	
