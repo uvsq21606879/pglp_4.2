@@ -21,7 +21,7 @@ public class CommandRPN {
 		operands.push(op);
 	}
 	
-	public static void CalculOperation() throws Exception{
+	public static void calculOperation() throws Exception{
 		
 		try {
     	
