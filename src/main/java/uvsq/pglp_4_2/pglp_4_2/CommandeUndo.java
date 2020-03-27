@@ -1,6 +1,6 @@
 package uvsq.pglp_4_2.pglp_4_2;
 
-public class CommandeUndo {
+public class CommandeUndo implements Commande {
 
 
 	@SuppressWarnings("static-access")
