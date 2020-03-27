@@ -3,6 +3,7 @@ package uvsq.pglp_4_2.pglp_4_2;
 import java.util.Stack;
 public class CommandRPN {
 
+	
 	public static Stack<Float> operands = new Stack();
 	public static Stack<Float> operandHistorique = new Stack();
 	public static Stack<Operation> operationHistorique = new Stack();
@@ -10,6 +11,10 @@ public class CommandRPN {
 	
 	public static void lectureOff() {
 		lecture=false;
+	}
+	
+	public static Boolean getLecture() {
+		return lecture;
 	}
 	
 	public static void addOperand(float op){
@@ -30,6 +35,11 @@ public class CommandRPN {
     		System.err.println(E.getMessage());
     	}
 	}
+	
+	 /*private static Float inverse(float a,float b, Operation o) {
+			// TODO Auto-generated method stub
+			return null;
+		}*/
 	
 	public static Stack getOperands() {
         return operands;
