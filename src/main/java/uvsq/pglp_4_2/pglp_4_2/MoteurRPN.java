@@ -36,16 +36,12 @@ public class MoteurRPN {
     	}
 	}
 	
-	 /*private static Float inverse(float a,float b, Operation o) {
-			// TODO Auto-generated method stub
-			return null;
-		}*/
 	
 	public static Stack getOperands() {
         return operands;
     }
 	
-	 public static String showCurentExpression() {
+	 public static String afficherExpression() {
 	        if (operands.size() > 0) {
 	            return "Expression courante :\n	"+operands.size() + " operande restant : " + operands.toString() + "\n";
 	        }
