@@ -4,7 +4,7 @@ public class CommandeUndo implements Commande {
 
 
 	@SuppressWarnings("static-access")
-	public void exec(CommandRPN RPN) {
+	public void exec(MoteurRPN RPN) {
 		
 		
 		float lastResult = (Float) RPN.getOperands().pop();
