@@ -1,6 +1,6 @@
 package uvsq.pglp_4_2.pglp_4_2;
 
-import java.util.Stack;
+
 
 public class Interpreteur {
 
@@ -8,7 +8,6 @@ public class Interpreteur {
 	private static CommandeUndo undo = new CommandeUndo();
 	private static CommandeCalcul calcul = new CommandeCalcul();
 
-	private static Stack<Commande> historique = new Stack();
 
 	public static void exec(MoteurRPN RPN, String str) throws Exception {
 		try {
@@ -37,7 +36,7 @@ public class Interpreteur {
 
 					MoteurRPN.operationHistorique.push(Operation.getOpFromValue(str.charAt(0)));
 					calcul.exec(RPN);
-					System.out.println("result : " + MoteurRPN.getOperands().peek());
+					System.out.println("resultat : " + MoteurRPN.getOperands().peek());
 				}
 
 				else {

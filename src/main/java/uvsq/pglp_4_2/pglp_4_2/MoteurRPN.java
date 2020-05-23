@@ -9,11 +9,11 @@ public class MoteurRPN {
 	public static Stack<Operation> operationHistorique = new Stack<Operation>();
 	protected static Boolean lecture = true;
 	
-	public static void lectureOff() {
+	public void lectureOff() {
 		lecture=false;
 	}
 	
-	public static Boolean getLecture() {
+	public Boolean getLecture() {
 		return lecture;
 	}
 	
@@ -21,7 +21,7 @@ public class MoteurRPN {
 		operands.push(op);
 	}
 	
-	public static void calculOperation() throws Exception{
+	public void calculOperation() throws Exception{
 		
 		try {
     	
@@ -42,7 +42,7 @@ public class MoteurRPN {
         return operands;
     }
 	
-	 public static String afficherExpression() {
+	 public String afficherExpression() {
 	        if (operands.size() > 0) {
 	            return "Expression courante :\n	"+operands.size() + " operande restant : " + operands.toString() + "\n";
 	        }
